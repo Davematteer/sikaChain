@@ -3,6 +3,7 @@ import route from "./routes"
 
 const PORT = process.env.PORT || 5000;
 const app = express();
+console.log("AFRICASTALKING API KEY:", process.env.AFRICAS_TALKING_TOKEN);
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
