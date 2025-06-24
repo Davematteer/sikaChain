@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import { Actor, ActorSubclass, HttpAgent } from '@dfinity/agent';
-import { idlFactory as myIDL } from "../../backend/dfx_generated/bindings/PhoneNumber";
-export { idlFactory as myIDL} from "../../backend/dfx_generated/bindings/PhoneNumber";
+import { idlFactory as myIDL } from "./PhoneNumber";
+export { idlFactory as myIDL} from "./PhoneNumber";
 import "dotenv/config";
 
 export async function createCanisterActor(): Promise<ActorSubclass> {
