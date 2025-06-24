@@ -119,8 +119,7 @@ router.post("/ussd", async (req: Request, res: Response) => {
 5. Reset PIN
 6. Get User Info
 7. Delete Account
-8. Transactions
-9. Withdraw to MoMo`
+8. Transactions`
       );
     }
 
