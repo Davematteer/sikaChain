@@ -1,0 +1,15 @@
+service: () -> {
+    deleteAccount: (text) -> (variant {Ok:text; Err:text});
+    getAllTransactions: (text, text) -> (vec record {id:text; to:text; from:text; timestamp:nat64; amount:text}) query;
+    getAllTransactionsAdmin: () -> (vec record {text; vec record {id:text; to:text; from:text; timestamp:nat64; amount:text}}) query;
+    getAllUsers: () -> (vec record {text; record {pin:text; phone:text}}) query;
+    getBalance: (text) -> (variant {Ok:nat64; Err:text}) query;
+    getBalances: () -> (vec record {text; nat64}) query;
+    getUserInfo: (text) -> (variant {Ok:record {pin:text; phone:text}; Err:text}) query;
+    mintSika: (text, nat64, text) -> (variant {Ok:text; Err:text});
+    registerUser: (text) -> (variant {Ok:text; Err:text});
+    resetPin: (text) -> (variant {Ok:text; Err:text});
+    sendSika: (text, text, nat64, text) -> (variant {Ok:text; Err:text});
+    smsTransaction: (text) -> (opt record {id:text; to:text; from:text; timestamp:nat64; amount:text}) query;
+    verifyPin: (text, text) -> (variant {Ok:bool; Err:text}) query;
+}
