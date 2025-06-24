@@ -1,0 +1,8 @@
+service: () -> {
+    getBalance: (principal) -> (variant {Ok:nat64; Err:text}) query;
+    getUserInfo: (principal) -> (variant {Ok:record {pin:text; phone:text}; Err:text}) query;
+    mintSika: (principal, nat64) -> (variant {Ok:text; Err:text});
+    registerUser: (principal, text) -> (variant {Ok:text; Err:text});
+    sendSika: (principal, principal, nat64) -> (variant {Ok:text; Err:text});
+    verifyPin: (principal, text) -> (variant {Ok:bool; Err:text}) query;
+}
